@@ -22,9 +22,9 @@
       console.log("DOM content loaded");
       const iframeLoc = document.getElementById("iframeLoc");
       const urlParams = new URLSearchParams(window.location.search);
-      console.log("urlParams");
+      console.log("urlParams", urlParams);
       let child;
-      if (urlParams.url && urlParms.title) {
+      if (urlParams.url && urlParams.title) {
         child = document.createElement("iframe", {
           src: urlParams.url,
           title: urlParams.title,
