@@ -26,13 +26,12 @@
       paramsTitle = urlParams.get('title')
       let child;
       if (paramsURL && paramsTitle) {
-        child = document.createElement("iframe", {
-          src: paramsURL,
-          title: paramsTitle,
-          width: "100%",
-          height: "100%",
-          frameBorder: "0",
-        });
+        child = document.createElement("iframe")
+        child.setAttribute("src", paramsURL)
+        child.setAttribute("title",paramsTitle)
+        child.setAttribute("width","100%")
+        child.setAttribute("height","100%")
+        child.setAttribute("frameBorder","0")
       } else {
         child = document.createTextNode(
           "Hm, we need a url and a title in the query params"
